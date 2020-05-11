@@ -9,3 +9,11 @@ then
 else
         echo "Invalid FirstName"
 fi
+read -p "Enter last name" lastName
+lastNamePattern="^[[:upper:]]{1}[[:lower:]]{3,}$"
+if [[ $lastName =~ $lastNamePattern ]]
+then
+        echo "Valid LastName"
+else
+        echo "Invalid LastName"
+fi
