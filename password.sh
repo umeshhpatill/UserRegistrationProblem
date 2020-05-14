@@ -1,10 +1,10 @@
 #!/bin/bash -x
 
-read -p "Enter password: " passRule1
-assPattern1="[[:alnum:]]{8,}$"
-if [[ $passRule1 =~ $passPattern1 ]]
+read -p "Enter password: " passRule2
+passPattern2="(?=[^A-Z]*[A-Z])[[:alnum:]]{8,}$"
+if [[ $passRule2 =~ $passPattern2 ]]
 then
-        echo "valid"
+        echo "Password Validated"
 else
         echo "Invalid Password"
 fi
